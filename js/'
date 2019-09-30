@@ -41,20 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navText = document.getElementsByTagName('a');
-
-let counter = 1;
-for (var node of navText) {
-    node.textContent = siteContent["nav"][`nav-item-${counter}`];
-    counter += 1
-}
+let navText1 = document.getElementsByTagName('a');
+navText[0].setAttribute('href', siteContent["nav"]["nav-item-1"])
 
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
-
-let ctaText = document.getElementsByClassName("cta-text");
-ctaText.textContent = siteContent["cta"]["h1"]
-
 
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
