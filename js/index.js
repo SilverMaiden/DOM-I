@@ -57,21 +57,69 @@ ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
 let button = document.querySelector("button")
 let cta_h1 = document.querySelector("h1");
 
+let multipleSelections = document.querySelectorAll("h4");
+let multipleTextContent = document.querySelectorAll(".text-content");
+let bottomContent = document.querySelector(".bottom-content");
+
 let break1 = document.createElement("br");
 let break2 = document.createElement("br");
 
-let num_1 = document.createTextNode(siteContent["cta"]["h1-1"]);
-let num_2 = document.createTextNode(siteContent["cta"]["h1-2"]);
-let num_3 = document.createTextNode(siteContent["cta"]["h1-3"]);
+let num1 = document.createTextNode(siteContent["cta"]["h1-1"]);
+let num2 = document.createTextNode(siteContent["cta"]["h1-2"]);
+let num3 = document.createTextNode(siteContent["cta"]["h1-3"]);
 
 let buttonText = document.createTextNode(siteContent["cta"]["button"]);
 
-cta_h1.appendChild(num_1);
+cta_h1.appendChild(num1);
 cta_h1.appendChild(break1)
-cta_h1.appendChild(num_2);
+cta_h1.appendChild(num2);
 cta_h1.appendChild(break2)
-cta_h1.appendChild(num_3);
+cta_h1.appendChild(num3);
 button.appendChild(buttonText);
+
+//Features header and text
+let featuresHeader = document.createTextNode(siteContent["main-content"]["features-h4"]);
+let featuresText = document.createTextNode(siteContent["main-content"]["features-content"]);
+
+//About header and text
+let aboutHeader = document.createTextNode(siteContent["main-content"]["about-h4"]);
+let aboutText = document.createTextNode(siteContent["main-content"]["about-content"]);
+
+//services, products, vision
+//Services header and text
+let servicesHeader = document.createTextNode(siteContent["main-content"]["services-h4"]);
+let servicesText = document.createTextNode(siteContent["main-content"]["services-content"]);
+
+//Product header and text
+let productHeader = document.createTextNode(siteContent["main-content"]["product-h4"]);
+let productText = document.createTextNode(siteContent["main-content"]["product-content"]);
+
+let visionHeader = document.createTextNode(siteContent["main-content"]["vision-h4"]);
+let visionText = document.createTextNode(siteContent["main-content"]["vision-content"]);
+
+bottomContent.style.display = "flex";
+bottomContent.style.justifyContent = "space-around";
+let bottomBoxes = bottomContent.children;
+let newCounter = 0;
+for (var element of bottomBoxes) {
+    element.style.paddingRight = "5%";
+    newCounter += 1
+}
+
+
+console.log(bottomBoxes)
+
+multipleSelections[0].appendChild(featuresHeader);
+multipleSelections[1].appendChild(aboutHeader);
+multipleSelections[2].appendChild(servicesHeader);
+multipleSelections[3].appendChild(productHeader);
+multipleSelections[4].appendChild(visionHeader);
+
+multipleTextContent[0].appendChild(featuresText)
+multipleTextContent[1].appendChild(aboutText);
+multipleTextContent[2].appendChild(servicesText);
+multipleTextContent[3].appendChild(productText);
+multipleTextContent[4].appendChild(visionText);
 
 
 let middleImage = document.getElementById("middle-img");
