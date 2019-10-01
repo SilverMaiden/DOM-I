@@ -9,7 +9,9 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1-1": "DOM",
+    "h1-2": " Is",
+    "h1-3": " Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -52,8 +54,24 @@ for (var node of navText) {
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
 
-let ctaText = document.getElementsByClassName("cta-text");
-ctaText.textContent = siteContent["cta"]["h1"]
+let button = document.querySelector("button")
+let cta_h1 = document.querySelector("h1");
+
+let break1 = document.createElement("br");
+let break2 = document.createElement("br");
+
+let num_1 = document.createTextNode(siteContent["cta"]["h1-1"]);
+let num_2 = document.createTextNode(siteContent["cta"]["h1-2"]);
+let num_3 = document.createTextNode(siteContent["cta"]["h1-3"]);
+
+let buttonText = document.createTextNode(siteContent["cta"]["button"]);
+
+cta_h1.appendChild(num_1);
+cta_h1.appendChild(break1)
+cta_h1.appendChild(num_2);
+cta_h1.appendChild(break2)
+cta_h1.appendChild(num_3);
+button.appendChild(buttonText);
 
 
 let middleImage = document.getElementById("middle-img");
