@@ -102,7 +102,7 @@ bottomContent.style.justifyContent = "space-around";
 let bottomBoxes = bottomContent.children;
 let newCounter = 0;
 for (var element of bottomBoxes) {
-    element.style.paddingRight = "5%";
+    element.style.paddingRight = "2.5%";
     newCounter += 1
 }
 
